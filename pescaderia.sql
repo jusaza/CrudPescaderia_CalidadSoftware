@@ -29,3 +29,28 @@ CREATE TABLE productos (
   PRIMARY KEY (id),
   KEY categoria_id (categoria_id)
 );
+
+
+INSERT INTO categoria_productos (nombre) VALUES
+('Pescado Blanco'),
+('Pescado Azul'),
+('Mariscos'),
+('Crustáceos'),
+('Moluscos'),
+('Filetes'),
+('Ahumados'),
+('Congelados'),
+('Ceviches'),
+('Pulpo y Calamar');
+
+INSERT INTO productos (nombre, descripcion, precio, categoria_id) VALUES
+('Merluza', 'Pescado blanco fresco ideal para freír o cocinar al vapor', 18000, 1),
+('Tilapia Roja', 'Pescado blanco suave, perfecto para filetear', 15000, 1),
+('Atún Fresco', 'Pescado azul rico en omega 3', 28000, 2),
+('Salmón Ahumado', 'Lonjas de salmón ahumado premium', 35000, 7),
+('Camarón Tigre', 'Camarón grande ideal para parrilla', 42000, 4),
+('Mejillones', 'Molusco fresco para sopas y arroces', 16000, 5),
+('Filete de Róbalo', 'Filete fresco sin espinas', 30000, 6),
+('Pulpo Entero', 'Pulpo fresco listo para cocción', 45000, 10),
+('Calamar en Anillos', 'Anillos de calamar limpios y listos para freír', 23000, 10),
+('Ceviche Mixto', 'Ceviche elaborado con pescado, camarón y pulpo', 20000, 9);
