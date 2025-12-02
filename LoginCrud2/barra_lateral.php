@@ -26,6 +26,7 @@ $mostrar=mysqli_fetch_array($buscandousu);
 <div class="BarraLateral">
 
 <ul>
+<li><a href="dashboard.php" >• Dashboard</a></li>
 <li><a href="productos_tabla.php" >• Productos</a></li>
 <li><a href="categoria_tabla.php" >• Categoría</a></li>
 <li><a href="cerrar_sesion.php" >• Cerrar sesión</a></li>
