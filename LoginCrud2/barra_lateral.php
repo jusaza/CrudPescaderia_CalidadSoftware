@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'conexion.php';
+include ('conexion.php');
 if(isset($_SESSION['usuarioingresando']))
 {
 $usuarioingresado = $_SESSION['usuarioingresando'];
