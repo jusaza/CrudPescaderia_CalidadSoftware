@@ -10,7 +10,7 @@ include("barra_lateral.php");
 <div class="ContenedorPrincipal">	
 <?php
  
-$filasmax = 7;
+$filasmax = 10;
  
     if (isset($_GET['pag'])) 
 	{
