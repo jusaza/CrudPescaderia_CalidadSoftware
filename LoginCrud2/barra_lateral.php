@@ -1,13 +1,18 @@
 <?php
 session_start();
 include_once ('conexion.php');
+
 if(isset($_SESSION['usuarioingresando']))
 {
-$usuarioingresado = $_SESSION['usuarioingresando'];
-$buscandousu = mysqli_query($conn,"SELECT * FROM usuarios WHERE correo = '".$usuarioingresado."'");
-$mostrar=mysqli_fetch_array($buscandousu);
-	
-}else
+    $usuarioingresado = $_SESSION['usuarioingresando'];
+
+    $stmt = $conn->prepare("SELECT * FROM usuarios WHERE correo = ?");
+    $stmt->bind_param("s", $usuarioingresado);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    $mostrar = $resultado->fetch_assoc();
+}
+else
 {
 	header('location: index.php');
 }
